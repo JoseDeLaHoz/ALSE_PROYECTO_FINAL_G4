@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Final: Fichero Fuente /home/alse/Documents/ALSE_PROYECTO_FINAL_G4/src/sensor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LOGO.jpeg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto Final
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sensores los cuales permiten determinar las condiciones del clima y ver como estas afectan el cultivo de papas y rosas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('sensor_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">sensor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sensor_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef SENSOR_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define SENSOR_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_sensor.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sensor.html">Sensor</a>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">double</span> _dato;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> _limite;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">double</span> _max;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">double</span> _min;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">double</span> _acum;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> _cant;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> _periodo;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> _conteo;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> _vmin;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_sensor.html#ae6671bee8558f67c9b188544ab55f1c4">   70</a></span>&#160;    <a class="code" href="class_sensor.html#ae6671bee8558f67c9b188544ab55f1c4">Sensor</a>(<span class="keywordtype">int</span> limite = 0, <span class="keywordtype">int</span> vmin = 0, <span class="keywordtype">int</span> periodo = 0, <span class="keywordtype">double</span> dato = 0., <span class="keywordtype">double</span> max = -3000, <span class="keywordtype">double</span> min = 3000, <span class="keywordtype">double</span> acum = 0, <span class="keywordtype">int</span> cant = 0){</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        _dato = dato;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        _limite = limite;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        _periodo = periodo;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        _acum = acum;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        _max = max;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        _min = min;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        _cant = cant;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        _vmin = vmin;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_sensor.html#a7aa01b35b7dd519378220ef0720ebd94">   84</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_sensor.html#a7aa01b35b7dd519378220ef0720ebd94">leerDato</a>(){ <span class="keywordflow">return</span> _dato; }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor.html#a7a861f30f1eb97f9b205d884c58f0fbc">actualizar</a>(<span class="keywordtype">int</span> contador, <span class="keywordtype">int</span> periodo);</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_sensor.html#a417d6021bc1c6bd13d8978e93053d80b">   95</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_sensor.html#a417d6021bc1c6bd13d8978e93053d80b">prom</a> () {<span class="keywordflow">return</span> _acum/_cant;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_sensor.html#a21b6a9349cc0518367347cc0090fa998">  100</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_sensor.html#a21b6a9349cc0518367347cc0090fa998">maximo</a> () {<span class="keywordflow">return</span> _max;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_sensor.html#ae4be261ac8df525824468d50fb94b66c">  105</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_sensor.html#ae4be261ac8df525824468d50fb94b66c">minimo</a> () {<span class="keywordflow">return</span> _min;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor.html#a75fe7aa55e8a8beeb5ebda6963c44429">reiniciar</a> ();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_temperatura.html">  115</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_temperatura.html">Temperatura</a>: <span class="keyword">public</span> <a class="code" href="class_sensor.html">Sensor</a>{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_temperatura.html#a1ff0e091a592688b3151fafc5d6de311">  120</a></span>&#160;    <a class="code" href="class_temperatura.html#a1ff0e091a592688b3151fafc5d6de311">Temperatura</a>():<a class="code" href="class_sensor.html">Sensor</a>(55, -10){}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_humedad.html">  125</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_humedad.html">Humedad</a>: <span class="keyword">public</span> <a class="code" href="class_sensor.html">Sensor</a>{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_humedad.html#a14dedd6e6f2e1077ac45a83171c74528">  130</a></span>&#160;    <a class="code" href="class_humedad.html#a14dedd6e6f2e1077ac45a83171c74528">Humedad</a>():<a class="code" href="class_sensor.html">Sensor</a>(100, 0){}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;};</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_velocidad.html">  135</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_velocidad.html">Velocidad</a>: <span class="keyword">public</span> <a class="code" href="class_sensor.html">Sensor</a>{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_velocidad.html#ac23e0e80993a85ee4b7d82212d4a07ff">  140</a></span>&#160;    <a class="code" href="class_velocidad.html#ac23e0e80993a85ee4b7d82212d4a07ff">Velocidad</a>():<a class="code" href="class_sensor.html">Sensor</a>(40, 0){}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;};</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_d_viento.html">  145</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_d_viento.html">DViento</a>: <span class="keyword">public</span> <a class="code" href="class_sensor.html">Sensor</a>{</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="class_d_viento.html#a2a9f2df88cc2b90098b9056fc6b05598">  150</a></span>&#160;    <a class="code" href="class_d_viento.html#a2a9f2df88cc2b90098b9056fc6b05598">DViento</a>():<a class="code" href="class_sensor.html">Sensor</a>(360, -180){}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;};</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="class_precipitacion.html">  155</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_precipitacion.html">Precipitacion</a>: <span class="keyword">public</span> <a class="code" href="class_sensor.html">Sensor</a>{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_precipitacion.html#afb6639a876c3415259783da388b3e51f">  160</a></span>&#160;    <a class="code" href="class_precipitacion.html#afb6639a876c3415259783da388b3e51f">Precipitacion</a>():<a class="code" href="class_sensor.html">Sensor</a>(50, 0){}</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;};</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_intensidad.html">  165</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_intensidad.html">Intensidad</a>: <span class="keyword">public</span> <a class="code" href="class_sensor.html">Sensor</a>{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_intensidad.html#aef918e12e9e1179b61d1074a386774bf">  170</a></span>&#160;    <a class="code" href="class_intensidad.html#aef918e12e9e1179b61d1074a386774bf">Intensidad</a>():<a class="code" href="class_sensor.html">Sensor</a>(2000, 0){}</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;};</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif // SENSOR_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_sensor_html_a75fe7aa55e8a8beeb5ebda6963c44429"><div class="ttname"><a href="class_sensor.html#a75fe7aa55e8a8beeb5ebda6963c44429">Sensor::reiniciar</a></div><div class="ttdeci">void reiniciar()</div><div class="ttdoc">La función reiniciar se encarga de reiniciar las variables relacionadas con el randomizador.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:13</div></div>
+<div class="ttc" id="aclass_d_viento_html"><div class="ttname"><a href="class_d_viento.html">DViento</a></div><div class="ttdoc">Definición de la clase DViento la cual tendrá pública la función DViento ya que está la va a heredar.</div><div class="ttdef"><b>Definition:</b> sensor.h:145</div></div>
+<div class="ttc" id="aclass_humedad_html"><div class="ttname"><a href="class_humedad.html">Humedad</a></div><div class="ttdoc">Definición de la clase Humedad a cual tendrá pública la función Humedad ya que está la va a heredar.</div><div class="ttdef"><b>Definition:</b> sensor.h:125</div></div>
+<div class="ttc" id="aclass_intensidad_html"><div class="ttname"><a href="class_intensidad.html">Intensidad</a></div><div class="ttdoc">Definición de la clase Intensidad la cual tendrá pública la función Intensidad ya que está la va a he...</div><div class="ttdef"><b>Definition:</b> sensor.h:165</div></div>
+<div class="ttc" id="aclass_sensor_html_a417d6021bc1c6bd13d8978e93053d80b"><div class="ttname"><a href="class_sensor.html#a417d6021bc1c6bd13d8978e93053d80b">Sensor::prom</a></div><div class="ttdeci">double prom()</div><div class="ttdoc">La función prom se encarga de ir calculado el promedio de las mediciones de los sensores dependiendo ...</div><div class="ttdef"><b>Definition:</b> sensor.h:95</div></div>
+<div class="ttc" id="aclass_velocidad_html_ac23e0e80993a85ee4b7d82212d4a07ff"><div class="ttname"><a href="class_velocidad.html#ac23e0e80993a85ee4b7d82212d4a07ff">Velocidad::Velocidad</a></div><div class="ttdeci">Velocidad()</div><div class="ttdoc">La función Velocidad la cual se apoya en la clase Sensor para generar datos aleatorios del sensor de ...</div><div class="ttdef"><b>Definition:</b> sensor.h:140</div></div>
+<div class="ttc" id="aclass_sensor_html_ae4be261ac8df525824468d50fb94b66c"><div class="ttname"><a href="class_sensor.html#ae4be261ac8df525824468d50fb94b66c">Sensor::minimo</a></div><div class="ttdeci">double minimo()</div><div class="ttdoc">La función minimo la cual se encarga de retornar el valor mínimo que hayan medido los sensores.</div><div class="ttdef"><b>Definition:</b> sensor.h:105</div></div>
+<div class="ttc" id="aclass_sensor_html_a7a861f30f1eb97f9b205d884c58f0fbc"><div class="ttname"><a href="class_sensor.html#a7a861f30f1eb97f9b205d884c58f0fbc">Sensor::actualizar</a></div><div class="ttdeci">void actualizar(int contador, int periodo)</div><div class="ttdoc">La función actualizar la cual se encarga de revisar si el sensor debe volver a ejecutar el randomizad...</div><div class="ttdef"><b>Definition:</b> sensor.cpp:4</div></div>
+<div class="ttc" id="aclass_sensor_html_a21b6a9349cc0518367347cc0090fa998"><div class="ttname"><a href="class_sensor.html#a21b6a9349cc0518367347cc0090fa998">Sensor::maximo</a></div><div class="ttdeci">double maximo()</div><div class="ttdoc">La función maximo la cual se encarga de retornar el valor máximo que hayan medido los sensores.</div><div class="ttdef"><b>Definition:</b> sensor.h:100</div></div>
+<div class="ttc" id="aclass_temperatura_html_a1ff0e091a592688b3151fafc5d6de311"><div class="ttname"><a href="class_temperatura.html#a1ff0e091a592688b3151fafc5d6de311">Temperatura::Temperatura</a></div><div class="ttdeci">Temperatura()</div><div class="ttdoc">La función Temperatura la cual se apoya en la clase Sensor para generar datos aleatorios del sensor d...</div><div class="ttdef"><b>Definition:</b> sensor.h:120</div></div>
+<div class="ttc" id="aclass_d_viento_html_a2a9f2df88cc2b90098b9056fc6b05598"><div class="ttname"><a href="class_d_viento.html#a2a9f2df88cc2b90098b9056fc6b05598">DViento::DViento</a></div><div class="ttdeci">DViento()</div><div class="ttdoc">La función DViento la cual se apoya en la clase Sensor para generar datos aleatorios del sensor de di...</div><div class="ttdef"><b>Definition:</b> sensor.h:150</div></div>
+<div class="ttc" id="aclass_sensor_html_a7aa01b35b7dd519378220ef0720ebd94"><div class="ttname"><a href="class_sensor.html#a7aa01b35b7dd519378220ef0720ebd94">Sensor::leerDato</a></div><div class="ttdeci">double leerDato()</div><div class="ttdoc">La función leerDato es de prueba la cual devuelve el valor del randomizador.</div><div class="ttdef"><b>Definition:</b> sensor.h:84</div></div>
+<div class="ttc" id="aclass_temperatura_html"><div class="ttname"><a href="class_temperatura.html">Temperatura</a></div><div class="ttdoc">Definición de la clase Temperatura la cual tendrá pública la función Temperatura ya que está la va a ...</div><div class="ttdef"><b>Definition:</b> sensor.h:115</div></div>
+<div class="ttc" id="aclass_precipitacion_html_afb6639a876c3415259783da388b3e51f"><div class="ttname"><a href="class_precipitacion.html#afb6639a876c3415259783da388b3e51f">Precipitacion::Precipitacion</a></div><div class="ttdeci">Precipitacion()</div><div class="ttdoc">La función Precipitacion la cual se apoya en la clase Sensor para generar datos aleatorios del sensor...</div><div class="ttdef"><b>Definition:</b> sensor.h:160</div></div>
+<div class="ttc" id="aclass_velocidad_html"><div class="ttname"><a href="class_velocidad.html">Velocidad</a></div><div class="ttdoc">Definición de la clase Velocidad la cual tendrá pública la función Velocidad ya que está la va a here...</div><div class="ttdef"><b>Definition:</b> sensor.h:135</div></div>
+<div class="ttc" id="aclass_sensor_html_ae6671bee8558f67c9b188544ab55f1c4"><div class="ttname"><a href="class_sensor.html#ae6671bee8558f67c9b188544ab55f1c4">Sensor::Sensor</a></div><div class="ttdeci">Sensor(int limite=0, int vmin=0, int periodo=0, double dato=0., double max=-3000, double min=3000, double acum=0, int cant=0)</div><div class="ttdoc">La función Sensor la cual se encarga de inicializar los sensores.</div><div class="ttdef"><b>Definition:</b> sensor.h:70</div></div>
+<div class="ttc" id="aclass_intensidad_html_aef918e12e9e1179b61d1074a386774bf"><div class="ttname"><a href="class_intensidad.html#aef918e12e9e1179b61d1074a386774bf">Intensidad::Intensidad</a></div><div class="ttdeci">Intensidad()</div><div class="ttdoc">La función Intensidad la cual se apoya en la clase Sensor para generar datos aleatorios del sensor de...</div><div class="ttdef"><b>Definition:</b> sensor.h:170</div></div>
+<div class="ttc" id="aclass_precipitacion_html"><div class="ttname"><a href="class_precipitacion.html">Precipitacion</a></div><div class="ttdoc">Definición de la clase Precipitacion la cual tendrá pública la función Precipitacion ya que está la v...</div><div class="ttdef"><b>Definition:</b> sensor.h:155</div></div>
+<div class="ttc" id="aclass_humedad_html_a14dedd6e6f2e1077ac45a83171c74528"><div class="ttname"><a href="class_humedad.html#a14dedd6e6f2e1077ac45a83171c74528">Humedad::Humedad</a></div><div class="ttdeci">Humedad()</div><div class="ttdoc">La función Humedad la cual se apoya en la clase Sensor para generar datos aleatorios del sensor de hu...</div><div class="ttdef"><b>Definition:</b> sensor.h:130</div></div>
+<div class="ttc" id="aclass_sensor_html"><div class="ttname"><a href="class_sensor.html">Sensor</a></div><div class="ttdoc">Definición de la clase Sensor. Aquí se define las variables y métodos tanto privados como públicos.</div><div class="ttdef"><b>Definition:</b> sensor.h:20</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="sensor_8h.html">sensor.h</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

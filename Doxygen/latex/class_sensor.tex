@@ -1,0 +1,146 @@
+\hypertarget{class_sensor}{}\doxysection{Referencia de la Clase Sensor}
+\label{class_sensor}\index{Sensor@{Sensor}}
+
+
+Definición de la clase \mbox{\hyperlink{class_sensor}{Sensor}}. Aquí se define las variables y métodos tanto privados como públicos.  
+
+
+
+
+{\ttfamily \#include $<$sensor.\+h$>$}
+
+
+
+Heredado por \mbox{\hyperlink{class_d_viento}{D\+Viento}}, \mbox{\hyperlink{class_humedad}{Humedad}}, \mbox{\hyperlink{class_intensidad}{Intensidad}}, \mbox{\hyperlink{class_precipitacion}{Precipitacion}}, \mbox{\hyperlink{class_temperatura}{Temperatura}} y \mbox{\hyperlink{class_velocidad}{Velocidad}}.
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sensor_ae6671bee8558f67c9b188544ab55f1c4}{Sensor}} (int limite=0, int vmin=0, int periodo=0, double dato=0., double max=-\/3000, double min=3000, double acum=0, int cant=0)
+\begin{DoxyCompactList}\small\item\em La función \mbox{\hyperlink{class_sensor}{Sensor}} la cual se encarga de inicializar los sensores. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sensor_a7aa01b35b7dd519378220ef0720ebd94}{leer\+Dato}} ()
+\begin{DoxyCompactList}\small\item\em La función leer\+Dato es de prueba la cual devuelve el valor del randomizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sensor_a7a861f30f1eb97f9b205d884c58f0fbc}{actualizar}} (int contador, int periodo)
+\begin{DoxyCompactList}\small\item\em La función actualizar la cual se encarga de revisar si el sensor debe volver a ejecutar el randomizador y además devuelve el máximo, el mínimo y el acumulado. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sensor_a417d6021bc1c6bd13d8978e93053d80b}{prom}} ()
+\begin{DoxyCompactList}\small\item\em La función prom se encarga de ir calculado el promedio de las mediciones de los sensores dependiendo la frecuencia deseada por el usuario. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sensor_a21b6a9349cc0518367347cc0090fa998}{maximo}} ()
+\begin{DoxyCompactList}\small\item\em La función maximo la cual se encarga de retornar el valor máximo que hayan medido los sensores. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sensor_ae4be261ac8df525824468d50fb94b66c}{minimo}} ()
+\begin{DoxyCompactList}\small\item\em La función minimo la cual se encarga de retornar el valor mínimo que hayan medido los sensores. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_a75fe7aa55e8a8beeb5ebda6963c44429}\label{class_sensor_a75fe7aa55e8a8beeb5ebda6963c44429}} 
+void \mbox{\hyperlink{class_sensor_a75fe7aa55e8a8beeb5ebda6963c44429}{reiniciar}} ()
+\begin{DoxyCompactList}\small\item\em La función reiniciar se encarga de reiniciar las variables relacionadas con el randomizador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Definición de la clase \mbox{\hyperlink{class_sensor}{Sensor}}. Aquí se define las variables y métodos tanto privados como públicos. 
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_sensor_ae6671bee8558f67c9b188544ab55f1c4}\label{class_sensor_ae6671bee8558f67c9b188544ab55f1c4}} 
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{Sensor()}{Sensor()}}
+{\footnotesize\ttfamily Sensor\+::\+Sensor (\begin{DoxyParamCaption}\item[{int}]{limite = {\ttfamily 0},  }\item[{int}]{vmin = {\ttfamily 0},  }\item[{int}]{periodo = {\ttfamily 0},  }\item[{double}]{dato = {\ttfamily 0.},  }\item[{double}]{max = {\ttfamily -\/3000},  }\item[{double}]{min = {\ttfamily 3000},  }\item[{double}]{acum = {\ttfamily 0},  }\item[{int}]{cant = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+La función \mbox{\hyperlink{class_sensor}{Sensor}} la cual se encarga de inicializar los sensores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em limite} & \\
+\hline
+{\em vmin} & \\
+\hline
+{\em periodo} & \\
+\hline
+{\em dato} & \\
+\hline
+{\em max} & \\
+\hline
+{\em min} & \\
+\hline
+{\em acum} & \\
+\hline
+{\em cant} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_sensor_a7a861f30f1eb97f9b205d884c58f0fbc}\label{class_sensor_a7a861f30f1eb97f9b205d884c58f0fbc}} 
+\index{Sensor@{Sensor}!actualizar@{actualizar}}
+\index{actualizar@{actualizar}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{actualizar()}{actualizar()}}
+{\footnotesize\ttfamily void Sensor\+::actualizar (\begin{DoxyParamCaption}\item[{int}]{contador,  }\item[{int}]{periodo }\end{DoxyParamCaption})}
+
+
+
+La función actualizar la cual se encarga de revisar si el sensor debe volver a ejecutar el randomizador y además devuelve el máximo, el mínimo y el acumulado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em contador} & \\
+\hline
+{\em periodo} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sensor_a7aa01b35b7dd519378220ef0720ebd94}\label{class_sensor_a7aa01b35b7dd519378220ef0720ebd94}} 
+\index{Sensor@{Sensor}!leerDato@{leerDato}}
+\index{leerDato@{leerDato}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{leerDato()}{leerDato()}}
+{\footnotesize\ttfamily double Sensor\+::leer\+Dato (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+La función leer\+Dato es de prueba la cual devuelve el valor del randomizador. 
+
+\begin{DoxyReturn}{Devuelve}
+la variable \+\_\+dato 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sensor_a21b6a9349cc0518367347cc0090fa998}\label{class_sensor_a21b6a9349cc0518367347cc0090fa998}} 
+\index{Sensor@{Sensor}!maximo@{maximo}}
+\index{maximo@{maximo}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{maximo()}{maximo()}}
+{\footnotesize\ttfamily double Sensor\+::maximo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+La función maximo la cual se encarga de retornar el valor máximo que hayan medido los sensores. 
+
+\begin{DoxyReturn}{Devuelve}
+El valor máximo de los sensores. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sensor_ae4be261ac8df525824468d50fb94b66c}\label{class_sensor_ae4be261ac8df525824468d50fb94b66c}} 
+\index{Sensor@{Sensor}!minimo@{minimo}}
+\index{minimo@{minimo}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{minimo()}{minimo()}}
+{\footnotesize\ttfamily double Sensor\+::minimo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+La función minimo la cual se encarga de retornar el valor mínimo que hayan medido los sensores. 
+
+\begin{DoxyReturn}{Devuelve}
+EL valor mínimo de los sensores. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sensor_a417d6021bc1c6bd13d8978e93053d80b}\label{class_sensor_a417d6021bc1c6bd13d8978e93053d80b}} 
+\index{Sensor@{Sensor}!prom@{prom}}
+\index{prom@{prom}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{prom()}{prom()}}
+{\footnotesize\ttfamily double Sensor\+::prom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+La función prom se encarga de ir calculado el promedio de las mediciones de los sensores dependiendo la frecuencia deseada por el usuario. 
+
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+/home/alse/\+Documents/\+A\+L\+S\+E\+\_\+\+P\+R\+O\+Y\+E\+C\+T\+O\+\_\+\+F\+I\+N\+A\+L\+\_\+\+G4/src/\mbox{\hyperlink{sensor_8h}{sensor.\+h}}\item 
+/home/alse/\+Documents/\+A\+L\+S\+E\+\_\+\+P\+R\+O\+Y\+E\+C\+T\+O\+\_\+\+F\+I\+N\+A\+L\+\_\+\+G4/src/sensor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,283 @@
+\hypertarget{class_control___d_b}{}\doxysection{Referencia de la Clase Control\+\_\+\+DB}
+\label{class_control___d_b}\index{Control\_DB@{Control\_DB}}
+
+
+Definición de la clase \mbox{\hyperlink{class_control___d_b}{Control\+\_\+\+DB}}. Aquí se decide que partes de la clase serán públicas y por lo tanto se heredarán y que parte será privada.  
+
+
+
+
+{\ttfamily \#include $<$Control\+\_\+\+D\+B.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_control___d_b_a697350b843f7e7ee3c1333654dbf5950}{Control\+\_\+\+DB}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em La función \mbox{\hyperlink{class_control___d_b}{Control\+\_\+\+DB}} es el constructor para crear un objeto tipo DB. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_a6190b2facdc227fec13d52036fc0662c}{abrir\+\_\+\+DB}} ()
+\begin{DoxyCompactList}\small\item\em La función abrir\+\_\+\+DB esta es la encargada de abrir la base de datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_a8f12bab0fce112423fa94d4a05bc40ae}{crear\+\_\+\+DB}} ()
+\begin{DoxyCompactList}\small\item\em La función crear\+\_\+\+DB se encarga de crear la base de datos si no se cuenta con una previamente. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_acf35266ca1412b8dfd7c246da17be5dd}{cerrar\+\_\+\+DB}} ()
+\begin{DoxyCompactList}\small\item\em La función cerrar\+\_\+\+DB esta se encarga de cerrar la base de datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_a39b3fe1ff1e2442e8b963c9ddf7c984e}{guardar\+Datos\+\_\+\+DB}} (double Data\mbox{[}18\mbox{]})
+\begin{DoxyCompactList}\small\item\em La función guardar\+Datos\+\_\+\+DB se encarga de guardar los siguientes promedios, máximos y mínimos en la base de datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_a4bd10cd943643bbf3ccee7abd288e426}{guardar\+Usuario\+\_\+\+DB}} (string Us, string Con, string Nom, string Ape, string Doc, string F\+Nac, int FT, int FH, int FV, int FD, int FP, int FI, int Cul)
+\begin{DoxyCompactList}\small\item\em La función guardar\+Usuario\+\_\+\+DB se encarga de guardar todos los datos personales y configuración básica de la toma de medida de los sensores relacionados con los usuarios, aqui se almacena el usuario, contraseña, nombre del usuario, apellido del usuario, documento de identidad, fecha de nacimiento, frecuencia de la toma de datos de los sensores y tipo de cultivo a revisar. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_a082b93ddc0c4bd2c7d8818d3af687f1e}{guardar\+Inicio\+\_\+\+DB}} (string uss)
+\begin{DoxyCompactList}\small\item\em La función guardar\+Inicio\+\_\+\+DB se encarga de guardar la fecha, hora, usuario y número de dato que inicio el programa. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_ab18319d3b1d02dd14a28e477ac29361c}{Comprobar\+\_\+U}} (string Us, string Con, int D\+\_\+\+Us\mbox{[}7\mbox{]})
+\begin{DoxyCompactList}\small\item\em La función Comprobar\+\_\+U es la encargada de validar el usuario y la contraseña ingresada para de esta forma dar paso a la medición de los sensores. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_a7b36528b97927c1fee788e036bafeccd}{Obtener\+Datos\+\_\+\+DB}} (double Data\mbox{[}18\mbox{]})
+\begin{DoxyCompactList}\small\item\em La función Obtener\+Datos\+\_\+\+DB se encarga de obteder los datos de la tabla datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_a64f2c8a00cb642c8047ca6fa4f1b1f3d}{Promedio\+\_\+T}} (int D\+\_\+\+Ref)
+\begin{DoxyCompactList}\small\item\em La función Promedio\+\_\+T es la encargada de calcular el promedio de la temperatura del dia para de esta forma determinar si fue un mal dia en el caso del cultivo de papa o si fue un dia de calor en el caso del cultivo de rosas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_a097d0eff10865df15b614a24478fdd85}{Guardar\+Dia\+\_\+\+DB}} (int Mal\+\_\+dia, int Dia\+\_\+calor, int Prueba)
+\begin{DoxyCompactList}\small\item\em La función Guardar\+Dia\+\_\+\+DB se encarga de llevar el registro de la temperatura del dia para de esta forma determinar si fue un mal dia en el caso del cultivo de papa o si fue un dia de calor en el caso del cultivo de rosas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control___d_b_a7403b5bb3bf9e762512e6c83c6593a4c}{Obtener\+Dias\+\_\+\+DB}} (int Dias\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em La funcion Obtener\+Dias\+\_\+\+DB se encarga de obtiene el último dato de la tabla dias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Definición de la clase \mbox{\hyperlink{class_control___d_b}{Control\+\_\+\+DB}}. Aquí se decide que partes de la clase serán públicas y por lo tanto se heredarán y que parte será privada. 
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_control___d_b_a697350b843f7e7ee3c1333654dbf5950}\label{class_control___d_b_a697350b843f7e7ee3c1333654dbf5950}} 
+\index{Control\_DB@{Control\_DB}!Control\_DB@{Control\_DB}}
+\index{Control\_DB@{Control\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{Control\_DB()}{Control\_DB()}}
+{\footnotesize\ttfamily Control\+\_\+\+D\+B\+::\+Control\+\_\+\+DB (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+La función \mbox{\hyperlink{class_control___d_b}{Control\+\_\+\+DB}} es el constructor para crear un objeto tipo DB. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_control___d_b_a6190b2facdc227fec13d52036fc0662c}\label{class_control___d_b_a6190b2facdc227fec13d52036fc0662c}} 
+\index{Control\_DB@{Control\_DB}!abrir\_DB@{abrir\_DB}}
+\index{abrir\_DB@{abrir\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{abrir\_DB()}{abrir\_DB()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::abrir\+\_\+\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+La función abrir\+\_\+\+DB esta es la encargada de abrir la base de datos. 
+
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_acf35266ca1412b8dfd7c246da17be5dd}\label{class_control___d_b_acf35266ca1412b8dfd7c246da17be5dd}} 
+\index{Control\_DB@{Control\_DB}!cerrar\_DB@{cerrar\_DB}}
+\index{cerrar\_DB@{cerrar\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{cerrar\_DB()}{cerrar\_DB()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::cerrar\+\_\+\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+La función cerrar\+\_\+\+DB esta se encarga de cerrar la base de datos. 
+
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_ab18319d3b1d02dd14a28e477ac29361c}\label{class_control___d_b_ab18319d3b1d02dd14a28e477ac29361c}} 
+\index{Control\_DB@{Control\_DB}!Comprobar\_U@{Comprobar\_U}}
+\index{Comprobar\_U@{Comprobar\_U}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{Comprobar\_U()}{Comprobar\_U()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::\+Comprobar\+\_\+U (\begin{DoxyParamCaption}\item[{string}]{Us,  }\item[{string}]{Con,  }\item[{int}]{D\+\_\+\+Us\mbox{[}7\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+La función Comprobar\+\_\+U es la encargada de validar el usuario y la contraseña ingresada para de esta forma dar paso a la medición de los sensores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Us} & \\
+\hline
+{\em Con} & \\
+\hline
+{\em D\+\_\+\+Us} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_a8f12bab0fce112423fa94d4a05bc40ae}\label{class_control___d_b_a8f12bab0fce112423fa94d4a05bc40ae}} 
+\index{Control\_DB@{Control\_DB}!crear\_DB@{crear\_DB}}
+\index{crear\_DB@{crear\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{crear\_DB()}{crear\_DB()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::crear\+\_\+\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+La función crear\+\_\+\+DB se encarga de crear la base de datos si no se cuenta con una previamente. 
+
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_a39b3fe1ff1e2442e8b963c9ddf7c984e}\label{class_control___d_b_a39b3fe1ff1e2442e8b963c9ddf7c984e}} 
+\index{Control\_DB@{Control\_DB}!guardarDatos\_DB@{guardarDatos\_DB}}
+\index{guardarDatos\_DB@{guardarDatos\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{guardarDatos\_DB()}{guardarDatos\_DB()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::guardar\+Datos\+\_\+\+DB (\begin{DoxyParamCaption}\item[{double}]{Data\mbox{[}18\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+La función guardar\+Datos\+\_\+\+DB se encarga de guardar los siguientes promedios, máximos y mínimos en la base de datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_a097d0eff10865df15b614a24478fdd85}\label{class_control___d_b_a097d0eff10865df15b614a24478fdd85}} 
+\index{Control\_DB@{Control\_DB}!GuardarDia\_DB@{GuardarDia\_DB}}
+\index{GuardarDia\_DB@{GuardarDia\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{GuardarDia\_DB()}{GuardarDia\_DB()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::\+Guardar\+Dia\+\_\+\+DB (\begin{DoxyParamCaption}\item[{int}]{Mal\+\_\+dia,  }\item[{int}]{Dia\+\_\+calor,  }\item[{int}]{Prueba }\end{DoxyParamCaption})}
+
+
+
+La función Guardar\+Dia\+\_\+\+DB se encarga de llevar el registro de la temperatura del dia para de esta forma determinar si fue un mal dia en el caso del cultivo de papa o si fue un dia de calor en el caso del cultivo de rosas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Mal\+\_\+dia} & \\
+\hline
+{\em Dia\+\_\+calor} & \\
+\hline
+{\em Prueba} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_a082b93ddc0c4bd2c7d8818d3af687f1e}\label{class_control___d_b_a082b93ddc0c4bd2c7d8818d3af687f1e}} 
+\index{Control\_DB@{Control\_DB}!guardarInicio\_DB@{guardarInicio\_DB}}
+\index{guardarInicio\_DB@{guardarInicio\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{guardarInicio\_DB()}{guardarInicio\_DB()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::guardar\+Inicio\+\_\+\+DB (\begin{DoxyParamCaption}\item[{string}]{uss }\end{DoxyParamCaption})}
+
+
+
+La función guardar\+Inicio\+\_\+\+DB se encarga de guardar la fecha, hora, usuario y número de dato que inicio el programa. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em uss} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_a4bd10cd943643bbf3ccee7abd288e426}\label{class_control___d_b_a4bd10cd943643bbf3ccee7abd288e426}} 
+\index{Control\_DB@{Control\_DB}!guardarUsuario\_DB@{guardarUsuario\_DB}}
+\index{guardarUsuario\_DB@{guardarUsuario\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{guardarUsuario\_DB()}{guardarUsuario\_DB()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::guardar\+Usuario\+\_\+\+DB (\begin{DoxyParamCaption}\item[{string}]{Us,  }\item[{string}]{Con,  }\item[{string}]{Nom,  }\item[{string}]{Ape,  }\item[{string}]{Doc,  }\item[{string}]{F\+Nac,  }\item[{int}]{FT,  }\item[{int}]{FH,  }\item[{int}]{FV,  }\item[{int}]{FD,  }\item[{int}]{FP,  }\item[{int}]{FI,  }\item[{int}]{Cul }\end{DoxyParamCaption})}
+
+
+
+La función guardar\+Usuario\+\_\+\+DB se encarga de guardar todos los datos personales y configuración básica de la toma de medida de los sensores relacionados con los usuarios, aqui se almacena el usuario, contraseña, nombre del usuario, apellido del usuario, documento de identidad, fecha de nacimiento, frecuencia de la toma de datos de los sensores y tipo de cultivo a revisar. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Us} & \\
+\hline
+{\em Con} & \\
+\hline
+{\em Nom} & \\
+\hline
+{\em Ape} & \\
+\hline
+{\em Doc} & \\
+\hline
+{\em F\+Nac} & \\
+\hline
+{\em FT} & \\
+\hline
+{\em FH} & \\
+\hline
+{\em FV} & \\
+\hline
+{\em FD} & \\
+\hline
+{\em FP} & \\
+\hline
+{\em FI} & \\
+\hline
+{\em Cul} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_a7b36528b97927c1fee788e036bafeccd}\label{class_control___d_b_a7b36528b97927c1fee788e036bafeccd}} 
+\index{Control\_DB@{Control\_DB}!ObtenerDatos\_DB@{ObtenerDatos\_DB}}
+\index{ObtenerDatos\_DB@{ObtenerDatos\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{ObtenerDatos\_DB()}{ObtenerDatos\_DB()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::\+Obtener\+Datos\+\_\+\+DB (\begin{DoxyParamCaption}\item[{double}]{Data\mbox{[}18\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+La función Obtener\+Datos\+\_\+\+DB se encarga de obteder los datos de la tabla datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_a7403b5bb3bf9e762512e6c83c6593a4c}\label{class_control___d_b_a7403b5bb3bf9e762512e6c83c6593a4c}} 
+\index{Control\_DB@{Control\_DB}!ObtenerDias\_DB@{ObtenerDias\_DB}}
+\index{ObtenerDias\_DB@{ObtenerDias\_DB}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{ObtenerDias\_DB()}{ObtenerDias\_DB()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::\+Obtener\+Dias\+\_\+\+DB (\begin{DoxyParamCaption}\item[{int}]{Dias\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+La funcion Obtener\+Dias\+\_\+\+DB se encarga de obtiene el último dato de la tabla dias. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Dias} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_control___d_b_a64f2c8a00cb642c8047ca6fa4f1b1f3d}\label{class_control___d_b_a64f2c8a00cb642c8047ca6fa4f1b1f3d}} 
+\index{Control\_DB@{Control\_DB}!Promedio\_T@{Promedio\_T}}
+\index{Promedio\_T@{Promedio\_T}!Control\_DB@{Control\_DB}}
+\doxysubsubsection{\texorpdfstring{Promedio\_T()}{Promedio\_T()}}
+{\footnotesize\ttfamily bool Control\+\_\+\+D\+B\+::\+Promedio\+\_\+T (\begin{DoxyParamCaption}\item[{int}]{D\+\_\+\+Ref }\end{DoxyParamCaption})}
+
+
+
+La función Promedio\+\_\+T es la encargada de calcular el promedio de la temperatura del dia para de esta forma determinar si fue un mal dia en el caso del cultivo de papa o si fue un dia de calor en el caso del cultivo de rosas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em D\+\_\+\+Ref} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+No devuelve nada. 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+/home/alse/\+Documents/\+A\+L\+S\+E\+\_\+\+P\+R\+O\+Y\+E\+C\+T\+O\+\_\+\+F\+I\+N\+A\+L\+\_\+\+G4/src/\mbox{\hyperlink{_control___d_b_8h}{Control\+\_\+\+D\+B.\+h}}\item 
+/home/alse/\+Documents/\+A\+L\+S\+E\+\_\+\+P\+R\+O\+Y\+E\+C\+T\+O\+\_\+\+F\+I\+N\+A\+L\+\_\+\+G4/src/Control\+\_\+\+D\+B.\+cpp\end{DoxyCompactItemize}
